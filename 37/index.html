@@ -6,8 +6,25 @@
     <title>Задание 37.1</title>
 </head>
 <body>
-    <script>
+<script>
+    function func1(name) {
+        return `Привет ${name}!`;
+    }
 
-    </script>
+    console.log(func1('Kirill'));
+
+    const func2 = function (name) {
+        return `Привет ${name}!`;
+    };
+    console.log(func2('Kirill'));
+
+    const func3 = name => `Привет ${name}!`;
+    console.log(func3('Kirill'));
+
+    const func4 = name => {
+        return `Привет ${name}!`;
+    };
+    console.log(func4('Kirill'));
+</script>
 </body>
 </html>
