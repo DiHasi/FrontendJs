@@ -6,28 +6,29 @@
     <title>Задание 41</title>
 </head>
 <body>
-    <script>
-        const person = {
-            firstName: 'Alex',
-            age: 20,
-            isAdult: true,
+<script>
+    const person = {
+        firstName: 'Alex',
+        age: 20,
+        isAdult: true,
 
-            hello: () => console.log(`Hi ${this.firstName}`),
+        hello: function() {
+            console.log(`Hi ${this.firstName}`);
+        },
 
-            info: () => {
-                const split = function () {
-                    return `
-                        Name: ${this.firstName}
-                        Age: ${this.age}
-                        isAdult: ${this.isAdult ? 'Y': 'N'}
-                    `
-                }
-                console.log(split())
-            },
-        }
+        info: function() {
+            const split = () => {
+                return `Name: ${this.firstName}` + '\n' +
+                    `Age: ${this.age}` + '\n' +
+                    `isAdult: ${this.isAdult ? 'Y' : 'N'}`
+            }
+            console.log(split())
+        },
 
-        obj.hello();
-        obj.info();
-    </script>
+    }
+
+    person.hello();
+    person.info();
+</script>
 </body>
 </html>
