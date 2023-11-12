@@ -9,9 +9,8 @@
     <script>
         const text = prompt('Введите текст');
         const word = prompt('Введите слово из текста');
-        // const index = '';
-
-        const result = ''
+        const index = text.indexOf(word);
+        const result = text.slice(0, index);
 
         alert(result);
     </script>
