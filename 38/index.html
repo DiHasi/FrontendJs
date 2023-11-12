@@ -6,10 +6,25 @@
     <title>Задание 38.1</title>
 </head>
 <body>
-    <script>
-        function sum(value, type = 'odd') {
-
+<script>
+    function sum(value, type = 'odd') {
+        if (typeof value !== 'number') {
+            return NaN;
         }
-    </script>
+
+        let total = 0;
+        for (let i = 1; i <= value; i++) {
+            if (type === 'odd' && i % 2 !== 0) {
+                total += i;
+            } else if (type === 'even' && i % 2 === 0) {
+                total += i;
+            }
+        }
+        return total;
+    }
+
+    console.log(sum(6));
+    console.log(sum(10, 'even'));
+</script>
 </body>
 </html>
