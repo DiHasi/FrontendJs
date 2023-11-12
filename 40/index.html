@@ -8,8 +8,9 @@
 <body>
     <script>
 
-        const info = () => {
-
+        const info = ({ firstName, lastName, age = 18 }) => {
+            console.log(`Меня зовут ${firstName} ${lastName}`);
+            console.log(`Мне ${age} лет`);
         }
 
         const obj = {
