@@ -28,9 +28,10 @@
         valueOf() {return `${this.money} рублей`},
     }
 
-    const divider = () => ' | '
+    const divider = () => ({});
+    divider.valueOf = () => " | "
 
-    const result = (`${object1}` + object1) + divider() + (`${object2}` + object2) + divider() + (`${object3}` + object3)
+    const result = (`${object1}` + object1) + divider + (`${object2}` + object2) + divider + (`${object3}` + object3)
     console.log(result)
 </script>
 </body>
